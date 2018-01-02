@@ -25,7 +25,7 @@
   <ion-content padding>
   <div [ngSwitch]="programacao">
     <ion-list *ngSwitchCase="'Primeiro'">
-      <ion-item *ngFor="let d23 of dia23">
+      <ion-item *ngFor="let d23 of dia23" (click)="Openmodal(d23)">
         <ion-avatar item-start>
           <img src="{{d23.img}}">
         </ion-avatar>
@@ -38,7 +38,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'segundo'">
-      <ion-item *ngFor="let d24 of dia24">
+      <ion-item *ngFor="let d24 of dia24" (click)="Openmodal(d24)">
         <ion-avatar item-start>
           <img src="{{d24.img}}">
         </ion-avatar>
@@ -50,7 +50,7 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'terceiro'">
-      <ion-item *ngFor="let d25 of dia25">
+      <ion-item *ngFor="let d25 of dia25" (click)="Openmodal(d25)">
         <ion-avatar item-start>
           <img src="{{d25.img}}">
         </ion-avatar>
@@ -61,7 +61,7 @@
       </ion-item>
     </ion-list>
     <ion-list *ngSwitchCase="'quarto'">
-      <ion-item *ngFor="let d26 of dia26">
+      <ion-item *ngFor="let d26 of dia26" (click)="Openmodal(d26)">
         <ion-avatar item-start>
           <img src="{{d26.img}}">
         </ion-avatar>

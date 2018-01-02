@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Platform } from 'ionic-angular';
+import { EscolhaPage } from '../escolha/escolha';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { Platform } from 'ionic-angular';
 export class AboutPage {
    programacao: string = "Primeiro";
   isAndroid: boolean = false;
+
 
   public dia23;
   public dia24;
@@ -43,6 +45,9 @@ export class AboutPage {
             {img:'assets/imgs/aurineque.jpg',nome:'Aurineque Da Costa',tipo:"Palestra",titulo:"Criptomoedas e Blockchain (Open your Mind)", horario:"16:00 - 17:00h"},
             ];
 
+  }
+  Openmodal(palestra){
+    this.navCtrl.push(EscolhaPage, { palestraSelecionada: palestra});
   }
 
 }

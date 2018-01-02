@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>Mais informações</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+      <ion-card>
+
+            <ion-item>
+                <ion-avatar item-start>
+                    <img src="{{palestra.img}}">
+                  </ion-avatar>
+              <h2>{{palestra.nome}}</h2>
+              <h3>{{palestra.tipo}}</h3>
+            </ion-item>
+            <ion-card-content>
+                <h4 text-center>{{palestra.titulo}}</h4>
+                <p text-center id="horario">{{palestra.horario}}</p>
+              </ion-card-content>
+          </ion-card>
+</ion-content>
