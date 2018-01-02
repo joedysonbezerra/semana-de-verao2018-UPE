@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController,AlertController } from 'ionic-angular';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { InAppBrowser,InAppBrowserOptions } from '@ionic-native/in-app-browser';
 import { Network } from '@ionic-native/network';
 
 @Component({
@@ -20,7 +20,10 @@ export class HomePage {
     });
 
   }
-  OpenBrowser(){
-    const inscricao  = this.iab.create('https://www.even3.com.br/evento/login?evento=semanaupecaruaru', '_self', 'zoom=no');
+  openWebpage(){
+    const options: InAppBrowserOptions = {
+      zoom: 'no'
+    }
+    const browser = this.iab.create('https://www.even3.com.br/evento/login?evento=semanaupecaruaru', '_self',options);
   }
 }
