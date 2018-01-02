@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,AlertController } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { Network } from '@ionic-native/network';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +9,18 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public alertCtrl:AlertController , private iab:InAppBrowser, private network: Network) {
+    let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
+      let alert = this.alertCtrl.create({
+        title: 'Ligue sua Internet',
+        subTitle: 'Algumas funções podem não funcionar, sem a internet',
+        buttons: ['OK']
+      });
+      alert.present();
+    });
 
   }
-
+  OpenBrowser(){
+    const inscricao  = this.iab.create('https://www.even3.com.br/evento/login?evento=semanaupecaruaru', '_self', 'zoom=no');
+  }
 }

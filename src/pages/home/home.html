@@ -1,17 +1,34 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar >
+    <ion-title text-center>Sobre</ion-title>
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+<ion-card>
+  <img src="assets/imgs/banner.png">
+  <ion-card-content>
+    <ion-card-title text-center>
+      1º Semana de Verão - UPE
+      </ion-card-title>
+    <p text-center>
+      Através da colaboração entre alunos do curso de Sistemas de Informação, a UPE Caruaru e o seu Núcleo de Tecnologia da Informação (NTI) promovem a 1ª Semana de Verão de Palestras e Workshops. A programação está repleta de conteúdos relacionados a Tecnologia (Redes, Segurança, Desenvolvimento Mobile e Web, etc.), Sound Design, Marketing Digital e Metodologias Ágeis.
+    </p>
+  </ion-card-content>
+</ion-card>
+<ion-grid>
+  <ion-row>
+  <ion-col col-3>
+</ion-col>
+    <ion-col col-6>
+  <button ion-button icon-left color="secondary" round (click)="OpenBrowser">
+ <ion-icon ios="ios-create" md="md-create"></ion-icon> Inscrição
+</button>
+</ion-col>
+<ion-col col-3>
+</ion-col>
+  </ion-row>
+</ion-grid>
+
 </ion-content>
