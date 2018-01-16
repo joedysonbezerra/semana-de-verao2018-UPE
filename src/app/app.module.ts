@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+import { PalestraPage } from '../pages/palestra/palestra';
 import { EscolhaPage } from '../pages/escolha/escolha';
-import { ContactPage } from '../pages/contact/contact';
+import { LocalPage } from '../pages/local/local';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -17,8 +17,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    PalestraPage,
+    LocalPage,
     HomePage,
     TabsPage,
     EscolhaPage
@@ -30,8 +30,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
+    PalestraPage,
+    LocalPage,
     HomePage,
     TabsPage,
     EscolhaPage
