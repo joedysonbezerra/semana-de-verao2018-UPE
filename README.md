@@ -9,6 +9,9 @@ Aplicativo Criado para mostrar de exemplo na minha palestra sobre Desenvolviment
 
 ### E logo em seguida, adicione esse outro comando no interpretador:
 
-<pre><code>ionic state restore</code></pre>
+<pre><code>ionic cordova prepare</code></pre>
 
 <blockquote>Para que ele instale novamente os plugins necessários e as plataformas adicionadas</blockquote>
+
+### Para ver o aplicativo rodando no simulador , adicione o comando no interpretador:
+<pre><code>ionic serve --lab</code></pre>
