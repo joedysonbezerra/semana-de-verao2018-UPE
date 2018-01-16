@@ -13,10 +13,19 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
+      var notificationOpenedCallback = function(jsonData) {
+        console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+      };
+    
+      window["plugins"].OneSignal
+        .startInit("8a11c258-ea94-4701-94c0-6e28cd390f9b", "135042760780")
+        .handleNotificationOpened(notificationOpenedCallback)
+        .endInit();
       statusBar.styleDefault();
+      statusBar.overlaysWebView(true);
+      statusBar.backgroundColorByHexString('#E5AD00');
       splashScreen.hide();
+
     });
   }
 }
